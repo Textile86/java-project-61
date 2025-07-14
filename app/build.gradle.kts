@@ -1,7 +1,8 @@
 plugins {
     id("com.github.ben-manes.versions") version "0.51.0"
     id("org.sonarqube") version "6.2.0.5505"
-    application
+    id("application")
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -34,4 +35,10 @@ sonar {
         property("sonar.organization", "textile86")
         property("sonar.host.url", "https://sonarcloud.io")
     }
+}
+
+checkstyle {
+    toolVersion = "10.12.5" // Актуальная версия
+    configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    isIgnoreFailures = false // Остановка сборки при ошибках
 }

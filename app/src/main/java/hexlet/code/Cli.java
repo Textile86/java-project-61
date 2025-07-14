@@ -4,6 +4,6 @@ import java.util.Scanner;
 public class Cli {
     public static String getUserName() {
         Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine() ;
+        return scanner.nextLine();
     }
 }
