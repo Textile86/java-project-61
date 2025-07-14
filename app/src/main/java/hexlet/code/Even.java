@@ -12,7 +12,7 @@ public class Even {
 
         for (int i = 0; i < 3; i++) {
             int randomNumber = 1 + (int) (Math.random() * 100);
-            System.out.println("Question: " + Integer.toString(randomNumber)); ;
+            System.out.println("Question: " + Integer.toString(randomNumber));
             String userAnswer = scanner.nextLine();
             if (isEven(randomNumber)) {
                 if (userAnswer.equals("yes")) {
@@ -22,8 +22,7 @@ public class Even {
                     System.out.println("Let's try again, " + name);
                     return;
                 }
-            }
-            else if (!isEven(randomNumber)) {
+            } else if (!isEven(randomNumber)) {
                 if (userAnswer.equals("no")) {
                     System.out.println("Correct!");
                 } else if (!userAnswer.equals("no")) {
