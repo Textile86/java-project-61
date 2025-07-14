@@ -42,3 +42,7 @@ checkstyle {
     configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
     isIgnoreFailures = false // Остановка сборки при ошибках
 }
+
+tasks.withType<JavaExec> {
+    standardInput = System.`in`
+}
