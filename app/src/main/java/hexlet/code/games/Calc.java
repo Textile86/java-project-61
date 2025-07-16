@@ -14,9 +14,9 @@ public class Calc {
     public static void gameplay(String name) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is the result of the expression?");
-        for (int i = 0; i < 3; i++) {
-            int leftInt = 1 + (int) (Math.random() * 20);
-            int rightInt = 1 + (int) (Math.random() * 20);
+        for (int i = 0; i < 3; i++) { // play 3 rounds
+            int leftInt = 1 + (int) (Math.random() * 20); // generate int from 1 to 20
+            int rightInt = 1 + (int) (Math.random() * 20); // generate int from 1 to 20
             char[] operations = {'+', '-', '*'};
             int index = getRandom(operations.length);
             System.out.println("Question: " + Integer.toString(leftInt) + " " + operations[index] + " "

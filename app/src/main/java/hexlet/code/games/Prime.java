@@ -6,8 +6,8 @@ public class Prime {
     public static void gameplay(String name) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (int i = 0; i < 3; i++) {
-            int randomNumber = 1 + (int) (Math.random() * 50);
+        for (int i = 0; i < 3; i++) { // play 3 rounds
+            int randomNumber = 1 + (int) (Math.random() * 50); // generate int from 1 to 50
             System.out.println("Question: " + Integer.toString(randomNumber));
             String userAnswer = scanner.nextLine();
             String correctAnswer;

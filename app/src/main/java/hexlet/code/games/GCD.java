@@ -8,8 +8,8 @@ public class GCD {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
-            int leftInt = (int) (Math.random() * 20);
-            int rightInt = (int) (Math.random() * 20);
+            int leftInt = (int) (Math.random() * 20); // generate int from 0 to 20
+            int rightInt = (int) (Math.random() * 20); // generate int from 0 to 20
             System.out.println("Question: " + Integer.toString(leftInt) + " " + Integer.toString(rightInt));
             int rightAnswer = 0;
             int remainder = 1;

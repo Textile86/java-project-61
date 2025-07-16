@@ -4,12 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Progression {
-    String progression;
 
     public static String generateProgression() {
-        int progressionLength = 5 + (int) (Math.random() * 6);
-        int progressionStart = 1 + (int) (Math.random() * 20);
-        int progressionStep = 1 + (int) (Math.random() * 10);
+        int progressionLength = 5 + (int) (Math.random() * 6); // generate int from 5 to 10
+        int progressionStart = 1 + (int) (Math.random() * 20); // generate int from 1 to 20
+        int progressionStep = 1 + (int) (Math.random() * 10); // generate int from 1 to 10
         int secretIndex = (int) (Math.random() * progressionLength);
         String progression = "";
         int rightAnswer = 0;
@@ -28,7 +27,7 @@ public class Progression {
     public static void gameplay(String name) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What number is missing in the progression?");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) { // play 3 rounds
             String firstProgression = generateProgression();
             String[] progressionWithAnswer = firstProgression.split(" ");
             String rightAnswer = progressionWithAnswer[progressionWithAnswer.length - 1];

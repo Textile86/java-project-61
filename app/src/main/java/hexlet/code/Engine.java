@@ -16,31 +16,31 @@ public class Engine {
 
     public static void startGame(int gameNumber) {
         switch (gameNumber) {
-            case 1:
+            case 1: // select menu 1 - Greet
                 greeetings();
                 break;
-            case 2:
+            case 2: // select menu 2 - game Even
                 String name2 = greeetings();
                 Even.gameplay(name2);
                 break;
-            case 3:
+            case 3: // select menu 3 - game Calc
                 String name3 = greeetings();
                 Calc.gameplay(name3);
                 break;
-            case 4:
+            case 4: // select menu 4 - game GCD
                 String name4 = greeetings();
                 GCD.gameplay(name4);
                 break;
-            case 5:
+            case 5: // select menu 5 - game Progression
                 String name5 = greeetings();
                 Progression.gameplay(name5);
                 break;
-            case 6:
+            case 6: // select menu 6 - game Prime
                 String name6 = greeetings();
                 Prime.gameplay(name6);
                 break;
-            case 0:
-                System.out.println("Good bye !");
+            case 0: // select menu 0 - Goodbye
+                System.out.println("Goodbye !");
                 break;
             default:
                 System.out.println("incorrect input");
