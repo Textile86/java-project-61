@@ -38,7 +38,7 @@ public class Progression {
             for (String str: correctProgression) {
                 finalProg = finalProg + " " + str;
             }
-            System.out.println(finalProg.trim());
+            System.out.println("Question: " + finalProg.trim());
             System.out.println("Your answer: ");
             String userAnswer = scanner.nextLine();
 
