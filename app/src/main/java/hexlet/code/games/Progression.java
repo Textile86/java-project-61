@@ -41,8 +41,8 @@ public class Progression {
             if (userAnswer.equals(rightAnswer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was " + "'\n"
-                    + rightAnswer + "'");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was " + "'"
+                        + rightAnswer + "'");
                 System.out.println("Let's try again, " + name  + "!");
                 return;
             }

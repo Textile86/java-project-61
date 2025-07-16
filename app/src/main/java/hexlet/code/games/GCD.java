@@ -32,7 +32,7 @@ public class GCD {
             if (userAnswer.equals(Integer.toString(rightAnswer))) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was \n"
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
                     + "'" + rightAnswer + "'");
                 System.out.println("Let's try again, " + name  + "!");
                 return;

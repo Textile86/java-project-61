@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Even {
     public static void gameplay(String name) {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
             int randomNumber = 1 + (int) (Math.random() * 100);
@@ -20,7 +20,7 @@ public class Even {
                 System.out.println("Correct!");
             }
             if (!userAnswer.equals(correctAnswer)) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was \n"
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
                     + "'" + correctAnswer + "'");
                 System.out.println("Let's try again, " + name  + "!");
                 return;

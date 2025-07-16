@@ -1,20 +1,25 @@
 package hexlet.code.games;
 
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
+
+    private static final Random random = new Random();
+
+    public static int getRandom(int length) {
+        return random.nextInt(length);
+    }
+
     public static void gameplay(String name) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < 3; i++) {
             int leftInt = 1 + (int) (Math.random() * 20);
             int rightInt = 1 + (int) (Math.random() * 20);
-            Random random = new Random();
             char[] operations = {'+', '-', '*'};
-            int index = random.nextInt(operations.length);
-            System.out.println("Question: " + Integer.toString(leftInt) + " " + operations[index] + " \n"
+            int index = getRandom(operations.length);
+            System.out.println("Question: " + Integer.toString(leftInt) + " " + operations[index] + " "
                 + Integer.toString(rightInt));
             int result = 0;
             switch (operations[index]) {
