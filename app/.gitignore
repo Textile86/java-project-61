@@ -96,3 +96,7 @@ build
 *.db
 
 .class
+
+# Ignore Ascinema files
+
+*.cast

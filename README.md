@@ -1,6 +1,10 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Textile86/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions)
 
+[![hexlet-check](https://github.com/Textile86/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions/workflows/hexlet-check.yml)
+
+[![SonarQube](https://github.com/Textile86/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions/workflows/build.yml)
+
 - even
 https://asciinema.org/a/sUM9Qi5d4LWXhp6Z0MhJ7lchi
 
