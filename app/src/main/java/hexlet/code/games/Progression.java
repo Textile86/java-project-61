@@ -34,7 +34,11 @@ public class Progression {
             String rightAnswer = progressionWithAnswer[progressionWithAnswer.length - 1];
             String[] correctProgression =
                 Arrays.copyOfRange(progressionWithAnswer, 1, progressionWithAnswer.length - 1);
-            System.out.println(Arrays.toString(correctProgression));
+            String finalProg = "";
+            for (String str: correctProgression) {
+                finalProg = finalProg + " " + str;
+            }
+            System.out.println(finalProg.trim());
             System.out.println("Your answer: ");
             String userAnswer = scanner.nextLine();
 

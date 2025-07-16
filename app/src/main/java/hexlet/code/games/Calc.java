@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Calc {
 
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
 
     public static int getRandom(int length) {
-        return random.nextInt(length);
+        return RANDOM.nextInt(length);
     }
 
     public static void gameplay(String name) {
