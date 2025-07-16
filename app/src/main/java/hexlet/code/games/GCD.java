@@ -3,13 +3,18 @@ package hexlet.code.games;
 
 import java.util.Scanner;
 
+import static hexlet.code.Engine.ROUNDS;
+
 public class GCD {
+    private static final int MAX_LEFTINT = 20;
+    private static final int MAX_RIGHTINT = 20;
+
     public static void gameplay(String name) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < 3; i++) {
-            int leftInt = (int) (Math.random() * 20); // generate int from 0 to 20
-            int rightInt = (int) (Math.random() * 20); // generate int from 0 to 20
+        for (int i = 0; i < ROUNDS; i++) {
+            int leftInt = (int) (Math.random() * MAX_LEFTINT); // generate int from 0 to 20
+            int rightInt = (int) (Math.random() * MAX_RIGHTINT); // generate int from 0 to 20
             System.out.println("Question: " + Integer.toString(leftInt) + " " + Integer.toString(rightInt));
             int rightAnswer = 0;
             int remainder = 1;

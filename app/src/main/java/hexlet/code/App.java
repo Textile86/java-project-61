@@ -13,7 +13,7 @@ public class App {
         System.out.println("Your choice: ");
         int gameNumber = Cli.getGameNumber();
 
-        Cli.scanner.nextLine();
+        Cli.SCANNER.nextLine();
 
         Engine.startGame(gameNumber);
 

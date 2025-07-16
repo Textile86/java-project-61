@@ -2,14 +2,14 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
-    static Scanner scanner = new Scanner(System.in);
+    protected static final Scanner SCANNER = new Scanner(System.in);
 
     public static String getUserName() {
-        return scanner.nextLine();
+        return SCANNER.nextLine();
     }
 
     public static int getGameNumber() {
-        return scanner.nextInt();
+        return SCANNER.nextInt();
     }
 
 }
