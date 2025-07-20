@@ -6,7 +6,7 @@ import hexlet.code.Engine;
 public class Even {
     public static final int EVEN_GAME = 2;
     private static final int MAX_NUMBER = 100;
-    static String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final String QUESTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void gameplay() {
         String[][] rounds = new String[App.ROUNDS][2];
@@ -19,7 +19,7 @@ public class Even {
                 rounds[i][1] = "no";
             }
         }
-        Engine.start(question, rounds);
+        Engine.start(QUESTION, rounds);
     }
 
     public static boolean isEven(int number) {
