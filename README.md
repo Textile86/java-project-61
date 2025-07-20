@@ -10,7 +10,7 @@
 6. Prime – определи простое число или нет
 0. Exit – выход из игры
 
-## Запуск игры
+## Запуск игры:
 Внутри директории build/install/app/bin находится исполняемый файл приложения App, которое необходимо запустить с помощью утилиты Make. Для запуска игры используйте команду: make run-dist 
 
 
@@ -22,17 +22,17 @@
 [![SonarQube](https://github.com/Textile86/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions/workflows/build.yml)
 
 ### Примеры запуска игр:
-- Even
+- Even: 
 https://asciinema.org/a/sUM9Qi5d4LWXhp6Z0MhJ7lchi
 
-- Calc
+- Calc: 
 https://asciinema.org/a/LYeSfInffINgTyGUUn2WvKD6a
 
-- GCD
+- GCD: 
 https://asciinema.org/a/s7sA87LQTpAGzo7PpUHiFnMlJ
 
-- Progression
+- Progression: 
 https://asciinema.org/a/bleIPyUUnPsNJqhXwioVA3Uim
 
-- Prime
+- Prime: 
 https://asciinema.org/a/1pa99gbTiSgXFPBxXkPbSobfG

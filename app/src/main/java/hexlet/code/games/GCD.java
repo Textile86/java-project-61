@@ -6,8 +6,8 @@ import hexlet.code.Engine;
 public class GCD {
     private static final int MAX_LEFTINT = 20;
     private static final int MAX_RIGHTINT = 20;
-    static String question = "Find the greatest common divisor of given numbers.";
-
+    private static final String QUESTION = "Find the greatest common divisor of given numbers.";
+    public static final int GCD_GAME = 4;
     public static void gameplay() {
         String[][] rounds = new String[App.ROUNDS][2];
         for (int i = 0; i < App.ROUNDS; i++) {
@@ -33,7 +33,7 @@ public class GCD {
             rounds[i][1] = Integer.toString(rightAnswer);
         }
 
-        Engine.start(question, rounds);
+        Engine.start(QUESTION, rounds);
     }
 }
 

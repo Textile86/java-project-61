@@ -4,8 +4,9 @@ import hexlet.code.App;
 import hexlet.code.Engine;
 
 public class Prime {
+    public static final int PRIME_GAME = 6;
     private static final int MAX_NUMBER = 100;
-    static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void gameplay() {
         String[][] rounds = new String[App.ROUNDS][2];
@@ -18,7 +19,7 @@ public class Prime {
                 rounds[i][1] = "no";
             }
         }
-        Engine.start(question, rounds);
+        Engine.start(QUESTION, rounds);
     }
 
     public static boolean isPrime(int number) {

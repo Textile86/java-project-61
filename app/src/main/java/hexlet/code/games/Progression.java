@@ -6,11 +6,12 @@ import hexlet.code.Engine;
 import java.util.Arrays;
 
 public class Progression {
+    public static final int PROGRESSION_GAME = 5;
     private static final int MAX_LENGTH_FROM = 5;
     private static final int MAX_LENGTH_TO = 6;
     private static final int MAX_START = 20;
     private static final int MAX_STEP = 10;
-    static String question = "What number is missing in the progression?";
+    private static final String QUESTION = "What number is missing in the progression?";
 
     public static String generateProgression() {
         int progressionLength = MAX_LENGTH_FROM + (int) (Math.random() * MAX_LENGTH_TO); // generate int from 5 to 10
@@ -47,6 +48,6 @@ public class Progression {
             rounds[i][1] = rightAnswer;
         }
 
-        Engine.start(question, rounds);
+        Engine.start(QUESTION, rounds);
     }
 }

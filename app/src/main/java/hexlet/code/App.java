@@ -24,25 +24,25 @@ public class App {
         int numberOfGame = App.SCANNER.nextInt();
 
         switch (numberOfGame) {
-            case 1:
+            case Cli.GREET:
                 Cli.greet();
                 break;
-            case 2:
+            case Even.EVEN_GAME:
                 Even.gameplay();
                 break;
-            case 3:
+            case Calc.CALC_GAME:
                 Calc.gameplay();
                 break;
-            case 4:
+            case GCD.GCD_GAME:
                 GCD.gameplay();
                 break;
-            case 5:
+            case Progression.PROGRESSION_GAME:
                 Progression.gameplay();
                 break;
-            case 6:
+            case Prime.PRIME_GAME:
                 Prime.gameplay();
                 break;
-            case 0:
+            case Cli.EXIT:
                 System.out.println("Goodbye !");
                 break;
             default:

@@ -6,14 +6,14 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
-
+    public static final int CALC_GAME = 3;
     private static final Random RANDOM = new Random();
     private static final int MAX_LEFTINT = 20;
     private static final int MAX_RIGHTINT = 20;
     public static int getRandom(int length) {
         return RANDOM.nextInt(length);
     }
-    static String question = "What is the result of the expression?";
+    private static final String QUESTION = "What is the result of the expression?";
 
     public static void gameplay() {
         String[][] rounds = new String[App.ROUNDS][2];
@@ -42,6 +42,6 @@ public class Calc {
                     + Integer.toString(rightInt);
             rounds[i][1] = Integer.toString(result);
         }
-        Engine.start(question, rounds);
+        Engine.start(QUESTION, rounds);
     }
 }

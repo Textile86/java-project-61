@@ -4,6 +4,7 @@ import hexlet.code.App;
 import hexlet.code.Engine;
 
 public class Even {
+    public static final int EVEN_GAME = 2;
     private static final int MAX_NUMBER = 100;
     static String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
