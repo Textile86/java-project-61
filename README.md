@@ -15,11 +15,9 @@
 
 
 ### Результаты тестов и статус линтера:
-[![Actions Status](https://github.com/Textile86/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions)
-
+[![SonarQube](https://github.com/Textile86/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions/workflows/build.yml)
 [![hexlet-check](https://github.com/Textile86/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions/workflows/hexlet-check.yml)
 
-[![SonarQube](https://github.com/Textile86/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/Textile86/java-project-61/actions/workflows/build.yml)
 
 ### Примеры запуска игр:
 - Even: 
