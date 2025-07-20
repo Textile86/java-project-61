@@ -1,6 +1,16 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+import java.util.Scanner;
+
 public class App {
+    public static final int ROUNDS = 3;
+    protected static final Scanner SCANNER = new Scanner(System.in);
+
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
@@ -11,11 +21,33 @@ public class App {
                 + "6 - Prime\n"
                 + "0 - Exit\n");
         System.out.println("Your choice: ");
-        int gameNumber = Cli.getGameNumber();
+        int numberOfGame = App.SCANNER.nextInt();
 
-        Cli.SCANNER.nextLine();
-
-        Engine.startGame(gameNumber);
-
+        switch (numberOfGame) {
+            case 1:
+                Cli.greet();
+                break;
+            case 2:
+                Even.gameplay();
+                break;
+            case 3:
+                Calc.gameplay();
+                break;
+            case 4:
+                GCD.gameplay();
+                break;
+            case 5:
+                Progression.gameplay();
+                break;
+            case 6:
+                Prime.gameplay();
+                break;
+            case 0:
+                System.out.println("Goodbye !");
+                break;
+            default:
+                System.out.println("incorrect input");
+                break;
+        }
     }
 }

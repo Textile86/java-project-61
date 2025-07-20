@@ -1,23 +1,22 @@
 package hexlet.code.games;
 
-
-import java.util.Scanner;
-
-import static hexlet.code.Engine.ROUNDS;
+import hexlet.code.App;
+import hexlet.code.Engine;
 
 public class GCD {
     private static final int MAX_LEFTINT = 20;
     private static final int MAX_RIGHTINT = 20;
+    static String question = "Find the greatest common divisor of given numbers.";
 
-    public static void gameplay(String name) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < ROUNDS; i++) {
+    public static void gameplay() {
+        String[][] rounds = new String[App.ROUNDS][2];
+        for (int i = 0; i < App.ROUNDS; i++) {
             int leftInt = (int) (Math.random() * MAX_LEFTINT); // generate int from 0 to 20
             int rightInt = (int) (Math.random() * MAX_RIGHTINT); // generate int from 0 to 20
-            System.out.println("Question: " + Integer.toString(leftInt) + " " + Integer.toString(rightInt));
             int rightAnswer = 0;
             int remainder = 1;
+            int initalLeftInt = leftInt;
+            int initalRightInt = rightInt;
             if (rightInt == 0) {
                 rightAnswer = leftInt;
             } else if (leftInt == 0) {
@@ -30,20 +29,11 @@ public class GCD {
                     rightAnswer = leftInt;
                 }
             }
-
-            System.out.println("Your answer: ");
-            String userAnswer = scanner.nextLine();
-
-            if (userAnswer.equals(Integer.toString(rightAnswer))) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
-                    + "'" + rightAnswer + "'");
-                System.out.println("Let's try again, " + name  + "!");
-                return;
-            }
+            rounds[i][0] = "Question: " + Integer.toString(initalLeftInt) + " " + Integer.toString(initalRightInt);
+            rounds[i][1] = Integer.toString(rightAnswer);
         }
-        System.out.println("Congratulations, " + name + "!");
+
+        Engine.start(question, rounds);
     }
 }
 

@@ -1,29 +1,28 @@
 package hexlet.code.games;
 
+import hexlet.code.App;
+import hexlet.code.Engine;
+
 import java.util.Random;
-import java.util.Scanner;
-import static hexlet.code.Engine.ROUNDS;
 
 public class Calc {
 
     private static final Random RANDOM = new Random();
     private static final int MAX_LEFTINT = 20;
     private static final int MAX_RIGHTINT = 20;
-
     public static int getRandom(int length) {
         return RANDOM.nextInt(length);
     }
+    static String question = "What is the result of the expression?";
 
-    public static void gameplay(String name) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is the result of the expression?");
-        for (int i = 0; i < ROUNDS; i++) { // play 3 rounds
+    public static void gameplay() {
+        String[][] rounds = new String[App.ROUNDS][2];
+        for (int i = 0; i < App.ROUNDS; i++) {
             int leftInt = 1 + (int) (Math.random() * MAX_LEFTINT); // generate int from 1 to 20
             int rightInt = 1 + (int) (Math.random() * MAX_RIGHTINT); // generate int from 1 to 20
             char[] operations = {'+', '-', '*'};
             int index = getRandom(operations.length);
-            System.out.println("Question: " + Integer.toString(leftInt) + " " + operations[index] + " "
-                + Integer.toString(rightInt));
+            System.out.println();
             int result = 0;
             switch (operations[index]) {
                 case '+':
@@ -39,17 +38,10 @@ public class Calc {
                     System.out.println("Error");
                     return;
             }
-            System.out.println("Your answer: ");
-            String userAnswer = scanner.nextLine();
-
-            if (userAnswer.equals(Integer.toString(result))) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was " + "'" + result + "'");
-                System.out.println("Let's try again, " + name  + "!");
-                return;
-            }
+            rounds[i][0] = "Question: " + Integer.toString(leftInt) + " " + operations[index] + " "
+                    + Integer.toString(rightInt);
+            rounds[i][1] = Integer.toString(result);
         }
-        System.out.println("Congratulations, " + name + "!");
+        Engine.start(question, rounds);
     }
 }

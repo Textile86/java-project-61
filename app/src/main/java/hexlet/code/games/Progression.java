@@ -1,15 +1,16 @@
 package hexlet.code.games;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import hexlet.code.App;
+import hexlet.code.Engine;
 
-import static hexlet.code.Engine.ROUNDS;
+import java.util.Arrays;
 
 public class Progression {
     private static final int MAX_LENGTH_FROM = 5;
     private static final int MAX_LENGTH_TO = 6;
     private static final int MAX_START = 20;
     private static final int MAX_STEP = 10;
+    static String question = "What number is missing in the progression?";
 
     public static String generateProgression() {
         int progressionLength = MAX_LENGTH_FROM + (int) (Math.random() * MAX_LENGTH_TO); // generate int from 5 to 10
@@ -30,33 +31,22 @@ public class Progression {
         return progression;
     }
 
-    public static void gameplay(String name) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What number is missing in the progression?");
-        for (int i = 0; i < ROUNDS; i++) { // play 3 rounds
+    public static void gameplay() {
+        String[][] rounds = new String[App.ROUNDS][2];
+        for (int i = 0; i < App.ROUNDS; i++) {
             String firstProgression = generateProgression();
             String[] progressionWithAnswer = firstProgression.split(" ");
             String rightAnswer = progressionWithAnswer[progressionWithAnswer.length - 1];
             String[] correctProgression =
-                Arrays.copyOfRange(progressionWithAnswer, 1, progressionWithAnswer.length - 1);
+                    Arrays.copyOfRange(progressionWithAnswer, 1, progressionWithAnswer.length - 1);
             String finalProg = "";
-            for (String str: correctProgression) {
+            for (String str : correctProgression) {
                 finalProg = finalProg + " " + str;
             }
-            System.out.println("Question: " + finalProg.trim());
-            System.out.println("Your answer: ");
-            String userAnswer = scanner.nextLine();
-
-            if (userAnswer.equals(rightAnswer)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was " + "'"
-                        + rightAnswer + "'");
-                System.out.println("Let's try again, " + name  + "!");
-                return;
-            }
+            rounds[i][0] = "Question: " + finalProg.trim();
+            rounds[i][1] = rightAnswer;
         }
-        System.out.println("Congratulations, " + name + "!");
-    }
 
+        Engine.start(question, rounds);
+    }
 }

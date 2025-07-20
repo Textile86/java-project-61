@@ -1,36 +1,24 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
-
-import static hexlet.code.Engine.ROUNDS;
+import hexlet.code.App;
+import hexlet.code.Engine;
 
 public class Prime {
-    private static final int MAX_NUMBER = 50;
+    private static final int MAX_NUMBER = 100;
+    static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static void gameplay(String name) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (int i = 0; i < ROUNDS; i++) { // play 3 rounds
-            int randomNumber = 1 + (int) (Math.random() * MAX_NUMBER); // generate int from 1 to 50
-            System.out.println("Question: " + Integer.toString(randomNumber));
-            String userAnswer = scanner.nextLine();
-            String correctAnswer;
+    public static void gameplay() {
+        String[][] rounds = new String[App.ROUNDS][2];
+        for (int i = 0; i < App.ROUNDS; i++) {
+            int randomNumber = 1 + (int) (Math.random() * MAX_NUMBER);
+            rounds[i][0] = "Question: " + Integer.toString(randomNumber);
             if (isPrime(randomNumber)) {
-                correctAnswer = "yes";
+                rounds[i][1] = "yes";
             } else {
-                correctAnswer = "no";
-            }
-            if (userAnswer.equals(correctAnswer)) {
-                System.out.println("Correct!");
-            }
-            if (!userAnswer.equals(correctAnswer)) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was " + "'"
-                    + correctAnswer + "'");
-                System.out.println("Let's try again, " + name + "!");
-                return;
+                rounds[i][1] = "no";
             }
         }
-        System.out.println("Congratulations, " + name + "!");
+        Engine.start(question, rounds);
     }
 
     public static boolean isPrime(int number) {
