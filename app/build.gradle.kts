@@ -25,6 +25,7 @@ sonar {
         property("sonar.projectKey", "Textile86_java-project-61")
         property("sonar.organization", "textile86")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.coverage.exclusions", "**/test/**, **/main/java/hexlet/code/**/*.java")
     }
 }
 
