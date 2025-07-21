@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.App;
 import hexlet.code.Engine;
 
 public class GCD {
@@ -9,8 +8,8 @@ public class GCD {
     private static final String QUESTION = "Find the greatest common divisor of given numbers.";
     public static final int GCD_GAME = 4;
     public static void gameplay() {
-        String[][] rounds = new String[App.ROUNDS][2];
-        for (int i = 0; i < App.ROUNDS; i++) {
+        String[][] rounds = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             int leftInt = (int) (Math.random() * MAX_LEFTINT); // generate int from 0 to 20
             int rightInt = (int) (Math.random() * MAX_RIGHTINT); // generate int from 0 to 20
             int rightAnswer = 0;
@@ -29,7 +28,7 @@ public class GCD {
                     rightAnswer = leftInt;
                 }
             }
-            rounds[i][0] = "Question: " + Integer.toString(initalLeftInt) + " " + Integer.toString(initalRightInt);
+            rounds[i][0] = Integer.toString(initalLeftInt) + " " + Integer.toString(initalRightInt);
             rounds[i][1] = Integer.toString(rightAnswer);
         }
 

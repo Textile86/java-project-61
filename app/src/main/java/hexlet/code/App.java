@@ -8,7 +8,6 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
-    public static final int ROUNDS = 3;
     protected static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -43,7 +42,7 @@ public class App {
                 Prime.gameplay();
                 break;
             case Cli.EXIT:
-                System.out.println("Goodbye !");
+                Cli.exit();
                 break;
             default:
                 System.out.println("incorrect input");

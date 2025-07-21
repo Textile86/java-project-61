@@ -3,6 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    public static final int ROUNDS = 3;
 
     public static void start(String question, String[][] rounds) {
         Scanner scanner = new Scanner(System.in);
@@ -12,7 +13,7 @@ public class Engine {
 
         System.out.println(question);
         for (String[] round : rounds) {
-            System.out.println(round[0]);
+            System.out.println("Question: " + round[0]);
             String answer = scanner.nextLine();
             System.out.println("Your answer: " + answer);
             if (!answer.equals(round[1])) {

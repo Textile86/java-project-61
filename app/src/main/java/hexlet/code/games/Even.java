@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.App;
 import hexlet.code.Engine;
 
 public class Even {
@@ -9,15 +8,11 @@ public class Even {
     private static final String QUESTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void gameplay() {
-        String[][] rounds = new String[App.ROUNDS][2];
-        for (int i = 0; i < App.ROUNDS; i++) {
+        String[][] rounds = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             int randomNumber = 1 + (int) (Math.random() * MAX_NUMBER);
-            rounds[i][0] = "Question: " + Integer.toString(randomNumber);
-            if (isEven(randomNumber)) {
-                rounds[i][1] = "yes";
-            } else {
-                rounds[i][1] = "no";
-            }
+            rounds[i][0] = Integer.toString(randomNumber);
+            rounds[i][1] = isEven(randomNumber) ? "yes" : "no";
         }
         Engine.start(QUESTION, rounds);
     }

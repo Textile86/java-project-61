@@ -12,4 +12,13 @@ public class Cli {
         String name = SCANNER.nextLine();
         System.out.println("Hello, " + name + "!");
     }
+    public static void exit() {
+        System.out.println("Goodbye !");
+    }
+
+
+
+
+
+
 }

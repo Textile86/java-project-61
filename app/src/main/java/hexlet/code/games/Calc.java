@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.App;
 import hexlet.code.Engine;
 
 import java.util.Random;
@@ -16,8 +15,8 @@ public class Calc {
     private static final String QUESTION = "What is the result of the expression?";
 
     public static void gameplay() {
-        String[][] rounds = new String[App.ROUNDS][2];
-        for (int i = 0; i < App.ROUNDS; i++) {
+        String[][] rounds = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             int leftInt = 1 + (int) (Math.random() * MAX_LEFTINT); // generate int from 1 to 20
             int rightInt = 1 + (int) (Math.random() * MAX_RIGHTINT); // generate int from 1 to 20
             char[] operations = {'+', '-', '*'};
@@ -38,7 +37,7 @@ public class Calc {
                     System.out.println("Error");
                     return;
             }
-            rounds[i][0] = "Question: " + Integer.toString(leftInt) + " " + operations[index] + " "
+            rounds[i][0] = Integer.toString(leftInt) + " " + operations[index] + " "
                     + Integer.toString(rightInt);
             rounds[i][1] = Integer.toString(result);
         }

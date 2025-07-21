@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.App;
 import hexlet.code.Engine;
 
 import java.util.Arrays;
@@ -13,19 +12,18 @@ public class Progression {
     private static final int MAX_STEP = 10;
     private static final String QUESTION = "What number is missing in the progression?";
 
-    public static String generateProgression() {
-        int progressionLength = MAX_LENGTH_FROM + (int) (Math.random() * MAX_LENGTH_TO); // generate int from 5 to 10
-        int progressionStart = 1 + (int) (Math.random() * MAX_START); // generate int from 1 to 20
-        int progressionStep = 1 + (int) (Math.random() * MAX_STEP); // generate int from 1 to 10
-        int secretIndex = (int) (Math.random() * progressionLength);
+
+
+    public static String generateProgression(int start, int step, int length) {
+        int secretIndex = (int) (Math.random() * length);
         String progression = "";
         int rightAnswer = 0;
-        for (int i = 0; i <= progressionLength; i++) {
+        for (int i = 0; i <= length; i++) {
             if (i == secretIndex) {
                 progression = progression + " ..";
-                rightAnswer = i * progressionStep + progressionStart;
+                rightAnswer = i * step + start;
             } else {
-                progression = progression + " " + Integer.toString(i * progressionStep + progressionStart);
+                progression = progression + " " + Integer.toString(i * step + start);
             }
         }
         progression = progression + " " + Integer.toString(rightAnswer);
@@ -33,9 +31,12 @@ public class Progression {
     }
 
     public static void gameplay() {
-        String[][] rounds = new String[App.ROUNDS][2];
-        for (int i = 0; i < App.ROUNDS; i++) {
-            String firstProgression = generateProgression();
+        String[][] rounds = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int start = 1 + (int) (Math.random() * MAX_START);
+            int step = 1 + (int) (Math.random() * MAX_STEP);
+            int length = MAX_LENGTH_FROM + (int) (Math.random() * MAX_LENGTH_TO);
+            String firstProgression = generateProgression(start, step, length);
             String[] progressionWithAnswer = firstProgression.split(" ");
             String rightAnswer = progressionWithAnswer[progressionWithAnswer.length - 1];
             String[] correctProgression =
@@ -44,7 +45,7 @@ public class Progression {
             for (String str : correctProgression) {
                 finalProg = finalProg + " " + str;
             }
-            rounds[i][0] = "Question: " + finalProg.trim();
+            rounds[i][0] = finalProg.trim();
             rounds[i][1] = rightAnswer;
         }
 
