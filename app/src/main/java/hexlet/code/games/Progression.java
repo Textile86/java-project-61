@@ -25,7 +25,7 @@ public class Progression {
             int step = Utils.randInt(1 + MAX_STEP);
             int length = MAX_LENGTH_FROM + Utils.randInt(MAX_LENGTH_TO);
             String[] progNumbers = generateProgression(start, step, length);
-            int randomIndex = Utils.randInt(progNumbers.length - 1);
+            int randomIndex = Utils.randInt(1, progNumbers.length - 2);
             String answer = progNumbers[randomIndex];
             String question = "";
             for (int j = 0; j < progNumbers.length; j++) {
