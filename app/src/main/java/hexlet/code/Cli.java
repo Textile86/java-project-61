@@ -3,8 +3,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
-    public static final int GREET = 1;
-    public static final int EXIT = 0;
     public static final Scanner SCANNER = new Scanner(System.in);
 
     public static void greet() {
@@ -15,10 +13,4 @@ public class Cli {
     public static void exit() {
         System.out.println("Goodbye !");
     }
-
-
-
-
-
-
 }

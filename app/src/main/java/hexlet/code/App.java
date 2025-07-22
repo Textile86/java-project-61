@@ -20,32 +20,32 @@ public class App {
                 + "6 - Prime\n"
                 + "0 - Exit\n");
         System.out.println("Your choice: ");
-        int numberOfGame = App.SCANNER.nextInt();
+        String numberOfGame = App.SCANNER.nextLine();
 
         switch (numberOfGame) {
-            case Cli.GREET:
+            case "1":
                 Cli.greet();
                 break;
-            case Even.EVEN_GAME:
+            case "2":
                 Even.gameplay();
                 break;
-            case Calc.CALC_GAME:
+            case "3":
                 Calc.gameplay();
                 break;
-            case GCD.GCD_GAME:
+            case "4":
                 GCD.gameplay();
                 break;
-            case Progression.PROGRESSION_GAME:
+            case "5":
                 Progression.gameplay();
                 break;
-            case Prime.PRIME_GAME:
+            case "6":
                 Prime.gameplay();
                 break;
-            case Cli.EXIT:
+            case "0":
                 Cli.exit();
                 break;
             default:
-                System.out.println("incorrect input");
+                System.out.println(numberOfGame + " is incorrect input.\nTry again!");
                 break;
         }
     }

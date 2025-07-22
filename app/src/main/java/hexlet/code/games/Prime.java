@@ -1,9 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
-    public static final int PRIME_GAME = 6;
     private static final int MAX_NUMBER = 100;
     private static final int NEGATIVE_NUMBER = -30;
     private static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -11,7 +11,7 @@ public class Prime {
     public static void gameplay() {
         String[][] rounds = new String[Engine.ROUNDS][2];
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int randomNumber = NEGATIVE_NUMBER + (int) (Math.random() * MAX_NUMBER);
+            int randomNumber = NEGATIVE_NUMBER + Utils.randInt(MAX_NUMBER);
             rounds[i][0] = Integer.toString(randomNumber);
             rounds[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
