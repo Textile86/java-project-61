@@ -9,11 +9,6 @@ public class Utils {
         return random.nextInt(number);
     }
 
-    public static int randInt(int first, int last) {
-        Random random = new Random();
-        return random.nextInt(first, last);
-    }
-
     public static int generateInt(int maxNumber) {
         return 1 + (int) (Math.random() * maxNumber);
     }
