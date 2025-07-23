@@ -39,7 +39,7 @@ public class Calc {
             case '*':
                 return leftInt * rightInt;
             default:
-                System.out.println("Error. Wrong operation symbol");
+                System.out.println("Error. Wrong operation symbol: " + operation);
                 break;
         }
         return result;
